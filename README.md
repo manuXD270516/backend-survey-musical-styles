@@ -1,12 +1,28 @@
-# Example Implementation of a Hexagonal Architecture
+# Test Nisum Software Company
+#Desarrollador: Manuel Saavedra 
 
 [![CI](https://github.com/thombergs/buckpal/actions/workflows/ci.yml/badge.svg)](https://github.com/thombergs/buckpal/actions/workflows/ci.yml)
 
-[![Get Your Hands Dirty On Clean Architecture](https://reflectoring.io/assets/img/get-your-hands-dirty-260x336.png)](https://reflectoring.io/book)
+Prueba tecnica para medir aptitudes de desarrollo de software.
+La lista de requerimientos es la siguiente:
 
-This is the companion code to my eBook [Get Your Hands Dirty on Clean Architecture](https://leanpub.com/get-your-hands-dirty-on-clean-architecture).
+1. Metodo para crear usuarios (instruccciones descritas en el PDF enviado)
 
-It implements a domain-centric "Hexagonal" approach of a common web application with Java and Spring Boot. 
+#Arquitectura de Software
+1. Sprint Boot
+2. Java 12
+3. Unit Test con Junit
+4. H2 base de datos en memoria
+5. Postman Herramienta documentacion APIs
+6. C4 Model (Diagrama de Componentes de la solucion)
+7. Gradle: Generacion de Build
+8. IntellJ IDEA (IDE de desarrollo)
+
+#Instrucciones
+1. Para Ejecutar, abrir el proyecto con Intellj IDEA y correr la solucion con boton Play
+2. Para correr los tests direccionar a la carpeta ***src/test/io.reflectoring.buckpal*** y ejecutar los archivos de test
+3. Para ejecutar las APIs (Guiarse en la documentacion de postman adjunta)
+4. para validar en base de datos ingresar a la url ```http://localhost:8080/h2Console``` user: sa, pass:
 
 ## Companion Articles
 
@@ -15,5 +31,5 @@ It implements a domain-centric "Hexagonal" approach of a common web application 
 
 ## Prerequisites
 
-* JDK 11
+* JDK 12
 * this project uses Lombok, so enable annotation processing in your IDE
