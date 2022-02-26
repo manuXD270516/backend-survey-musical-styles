@@ -18,6 +18,9 @@ La lista de requerimientos es la siguiente:
 7. Gradle: Generacion de Build
 8. IntellJ IDEA (IDE de desarrollo)
 
+#URL APIs
+https://documenter.getpostman.com/view/2654210/UVkqqZg1
+
 #Instrucciones
 1. Para Ejecutar, abrir el proyecto con Intellj IDEA y correr la solucion con boton Play
 2. Para correr los tests direccionar a la carpeta ***src/test/io.reflectoring.buckpal*** y ejecutar los archivos de test
