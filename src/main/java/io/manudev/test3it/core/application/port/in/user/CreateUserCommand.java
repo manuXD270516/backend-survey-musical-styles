@@ -27,7 +27,6 @@ public class CreateUserCommand extends SelfValidating<CreateUserCommand> {
     private String password;
 
     @NotNull
-    @NotEmpty
     private List<PhoneDto> phones;
 
     public CreateUserCommand(String fullname, String email, String password, List<PhoneDto> phones) {
