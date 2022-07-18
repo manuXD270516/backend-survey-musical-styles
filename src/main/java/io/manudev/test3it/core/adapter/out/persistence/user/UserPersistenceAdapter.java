@@ -67,7 +67,7 @@ public class UserPersistenceAdapter implements UserPort {
         return mapEntitiesToDtoList(userRepository.findAll());
     }
 
-    private static List<UserDto> mapEntitiesToDtoList(List<UserJpaEntity> entities){
+    private static List<UserDto> mapEntitiesToDtoList(List<UserJpaEntity> entities) {
         return entities.stream()
                 .map(entity -> mapEntityToDto(entity))
                 .collect(Collectors.toList());
@@ -85,7 +85,7 @@ public class UserPersistenceAdapter implements UserPort {
         UserJpaEntity x = UserJpaEntity.builder()
                 .fullname(command.getFullname())
                 .email(command.getEmail())
-                .password(passwordEncoder.password().encode(command.getPassword()))
+                .password(command.getPassword() != null ? passwordEncoder.password().encode(command.getPassword()) : null)
                 //.phones(PhonePersistenceAdapter.mapDtosToEntities(command.getPhones()))
                 .build()
                 .addPhones(PhonePersistenceAdapter.mapDtosToEntities(command.getPhones()));

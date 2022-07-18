@@ -1,5 +1,6 @@
-# Test Nisum Software Company
+# Technical Test 3IT (React Native & Spring Boot)
 #Desarrollador: Manuel Saavedra 
+#Backend
 
 [![CI](https://github.com/thombergs/buckpal/actions/workflows/ci.yml/badge.svg)](https://github.com/thombergs/buckpal/actions/workflows/ci.yml)
 
@@ -10,20 +11,19 @@ La lista de requerimientos es la siguiente:
 
 #Arquitectura de Software
 1. Sprint Boot
-2. Java 12
-3. Unit Test con Junit
+2. Java 11
+3. Unit Test con Junit & Mockito
 4. H2 base de datos en memoria
 5. Postman Herramienta documentacion APIs
-6. C4 Model (Diagrama de Componentes de la solucion)
 7. Gradle: Generacion de Build
 8. IntellJ IDEA (IDE de desarrollo)
 
 #URL APIs
-https://documenter.getpostman.com/view/2654210/UVkqqZg1
+https://documenter.getpostman.com/view/21907225/UzQxMPQt
 
 #Instrucciones
 1. Para Ejecutar, abrir el proyecto con Intellj IDEA y correr la solucion con boton Play
-2. Para correr los tests direccionar a la carpeta ***src/test/io.reflectoring.buckpal*** y ejecutar los archivos de test
+2. Para correr los tests direccionar a la carpeta ***src/test/io.manudev.test3it*** y ejecutar los archivos de test
 3. Para ejecutar las APIs (Guiarse en la documentacion de postman adjunta)
 4. para validar en base de datos ingresar a la url ```http://localhost:8080/h2Console``` user: sa, pass:
 
@@ -34,5 +34,5 @@ https://documenter.getpostman.com/view/2654210/UVkqqZg1
 
 ## Prerequisites
 
-* JDK 12
-* this project uses Lombok, so enable annotation processing in your IDE
+* JDK 11
+* El proyecto utiliza lombox, habilitar las anotaciones JAVA en las configuraciones del IDE.

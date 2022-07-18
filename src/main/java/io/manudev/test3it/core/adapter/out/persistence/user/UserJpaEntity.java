@@ -23,13 +23,13 @@ import java.util.*;
 @SuperBuilder
 public class UserJpaEntity extends BaseJpaEntity {
 
-    @Column(name = "fullname", nullable = false)
+    @Column(name = "fullname")
     private String fullname;
 
     @Column(name = "email", nullable = false)
     private String email;
 
-    @Column(name = "password", nullable = false)
+    @Column(name = "password")
     private String password;
 
     @OneToMany(mappedBy = "userActive", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -57,9 +57,12 @@ public class UserJpaEntity extends BaseJpaEntity {
     }
 
     public UserJpaEntity addPhones(List<PhoneJpaEntity> phones) {
-        this.phones.addAll(phones);
-        phones.stream()
-                .forEach(p -> p.setUserActive(this));
+        if (phones != null) {
+            this.phones.addAll(phones);
+            phones.stream()
+                    .forEach(p -> p.setUserActive(this));
+
+        }
         return this;
     }
 

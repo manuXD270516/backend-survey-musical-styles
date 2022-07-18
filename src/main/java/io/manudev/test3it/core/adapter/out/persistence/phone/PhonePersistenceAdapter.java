@@ -24,9 +24,13 @@ public class PhonePersistenceAdapter implements PhonePort {
     }
 
     public static List<PhoneJpaEntity> mapDtosToEntities(List<PhoneDto> dtos){
-        return dtos.stream()
-                .map(currentDto -> mapDtoToEntity(currentDto))
-                .collect(Collectors.toList());
+        if (dtos!=null) {
+            return dtos.stream()
+                    .map(currentDto -> mapDtoToEntity(currentDto))
+                    .collect(Collectors.toList());
+        }
+        return null;
+
     }
 
 }

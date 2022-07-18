@@ -14,7 +14,7 @@ public class UserValidator {
         if (!HelpersMethods.emailValid(createUserCommand.getEmail())) {
             errors.add("Email invalido");
         }
-        if (!HelpersMethods.passwordValid(createUserCommand.getPassword())) {
+        if (createUserCommand.getPassword() != null && !HelpersMethods.passwordValid(createUserCommand.getPassword())) {
             errors.add("Password invalido, Password must contain at least one digit [0-9].\n" +
                     "Password must contain at least one lowercase Latin character [a-z].\n" +
                     "Password must contain at least one uppercase Latin character [A-Z].\n" +

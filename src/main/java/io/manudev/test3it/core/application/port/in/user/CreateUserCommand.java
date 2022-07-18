@@ -14,7 +14,6 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = false)
 public class CreateUserCommand extends SelfValidating<CreateUserCommand> {
 
-    @NotNull
     private String fullname;
 
     @NotNull
@@ -22,11 +21,8 @@ public class CreateUserCommand extends SelfValidating<CreateUserCommand> {
     //@Email
     private String email;
 
-    @NotNull
-    @Length(min = 8)
     private String password;
 
-    @NotNull
     private List<PhoneDto> phones;
 
     public CreateUserCommand(String fullname, String email, String password, List<PhoneDto> phones) {

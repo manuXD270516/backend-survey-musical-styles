@@ -14,6 +14,14 @@ public interface MusicalStyleRepository extends CrudRepository<MusicalStyleJpaEn
 
     Optional<MusicalStyleJpaEntity> findByName(String name);
 
-    @Query(value = "SELECT ms FROM MusicalStyleJpaEntity ms JOIN ms.users us")
+    /*@Query(value = "SELECT ms.code, ms.name, ms.description, count(us)" +
+            "FROM MusicalStyleJpaEntity ms " +
+            "JOIN ms.users us " +
+            "GROUP BY ms.code, ms.name, ms.description")
+    List<MusicalStyleJpaEntity> getMetricPreferencesUsersByMusicalStyle();*/
+
+    @Query(value = "SELECT DISTINCT ms " +
+            "FROM MusicalStyleJpaEntity ms " +
+            "JOIN FETCH ms.users us ")
     List<MusicalStyleJpaEntity> getMetricPreferencesUsersByMusicalStyle();
 }
